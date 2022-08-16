@@ -43,7 +43,7 @@ if __name__ == '__main__':
     # Mount Applications
     cherrypy.tree.mount(Root(), '/', conf_root)
     cherrypy.tree.mount(Monitor(), '/monitor', conf_monitor)
-    cherrypy.tree.mount(Configuration(), '/configuration')
+    cherrypy.tree.mount(Configuration(), '/configuration', conf_configuration)
 
     # Run the engine
     cherrypy.engine.start()
